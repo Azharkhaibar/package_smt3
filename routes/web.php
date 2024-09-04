@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\postcontroller;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
@@ -25,9 +26,7 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/posts', function() {
-    return inertia::render('postcomponent');
-});
+Route::get('/posts', [postcontroller::class, 'index'])->name('post.index');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

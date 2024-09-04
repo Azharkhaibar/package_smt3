@@ -5,7 +5,7 @@ import { Box, Heading, Text, Flex, Image } from "@chakra-ui/react";
 export const PostComponent = () => {
     return (
         <Box>
-            <Heading>Alright man</Heading>
+            <Heading>Alright man React with controller</Heading>
             <Text>HALLO</Text>
         </Box>
     );
