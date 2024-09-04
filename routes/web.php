@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\homecontroller;
 use App\Http\Controllers\postcontroller;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
@@ -27,6 +28,9 @@ Route::get('/', function () {
 });
 
 Route::get('/posts', [postcontroller::class, 'index'])->name('post.index');
+Route::get('/home', [homecontroller::class, 'index'])->name('home.index');
+Route::get('/home/new', [homecontroller::class, 'new'])->name('home.new');
+Route::get('/home/extra', [homecontroller::class, 'extra'])->name('home.extra');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
